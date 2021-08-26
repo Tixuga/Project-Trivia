@@ -29,10 +29,6 @@ class HomeController extends Controller
     {
         return view('pages.gamePage');
     }
-    public function leader()
-    {
-        return view('pages.leaderboards');
-    }
     public function tutorial()
     {
         return view('pages.tutorial');

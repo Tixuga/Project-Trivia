@@ -34,9 +34,9 @@
                 margin: 0;
             }
 
-            .full-height {
+             /* .full-height {
                 height: 100vh;
-            }
+            } 
 
             .flex-center {
                 align-items: center;
@@ -46,13 +46,13 @@
 
             .position-ref {
                 position: relative;
-            }
+            }*/
 
             .top-right {
                 position: absolute;
                 right: 10px;
                 top: 18px;
-            }
+            } 
 
             .content {
                 text-align: center;
@@ -83,13 +83,25 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            
+            h1{
+                color: white;
+            }
+            .card{
+                background-color: rgba(0, 0, 0, 0.437);
+                color: white;
+            }
+            .table{
+                background-color: rgba(0, 0, 0, 0.437);
+                color: white;
+            }
         </style>
     </head>
     <body>
         @component('master.header')
         @endcomponent
 
-        <div class="flex-center position-ref full-height">
+        <div class="container">
             <div class="content">
             
             <main class="py-4">
