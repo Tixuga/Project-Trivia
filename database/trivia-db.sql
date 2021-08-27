@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 26, 2021 at 05:55 PM
+-- Generation Time: Aug 27, 2021 at 01:16 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.4.21
 
@@ -92,7 +92,28 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `points`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Tixa', 'phpteste@sapo.pt', NULL, '$2y$10$uqKluszLzeEUvcWOpx.M3OudNWwHkFMo.h1xZtMIEnox0Sv4oLGbq', 0, NULL, '2021-08-26 14:53:16', '2021-08-26 14:53:16');
+(1, 'Tixa', 'phpteste@sapo.pt', NULL, '$2y$10$c3nEGsGEz1bAjZXjIWxmPuZD5w9ASVszLoYMYvWFQt3yZE1vQXd6.', 0, 'ORovr2dSw7767WxSu61Bt1EgHbDCo8ZsWH92Wkjj8wpyszi6tt6P5RHTMYnk', NULL, NULL),
+(2, 'efrain89', 'jadon90@example.org', '2021-08-26 18:00:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, 'zlPhTtMkT8', '2021-08-26 18:00:27', '2021-08-26 18:00:27'),
+(3, 'turner.kip', 'king.stiedemann@example.org', '2021-08-26 18:00:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, 'VKJnNSxfYy', '2021-08-26 18:00:27', '2021-08-26 18:00:27'),
+(4, 'heloise.stehr', 'amya83@example.com', '2021-08-26 18:00:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, 'lUXvFx1GK7', '2021-08-26 18:00:27', '2021-08-26 18:00:27'),
+(5, 'bethel.stamm', 'cora84@example.org', '2021-08-26 18:00:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, 'g3dsFGivFM', '2021-08-26 18:00:27', '2021-08-26 18:00:27'),
+(6, 'laney84', 'monahan.kianna@example.org', '2021-08-26 18:00:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, 'KAup059S16', '2021-08-26 18:00:27', '2021-08-26 18:00:27'),
+(7, 'rharber', 'audrey.hoppe@example.com', '2021-08-26 18:00:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, 'ABQWTaosp8', '2021-08-26 18:00:27', '2021-08-26 18:00:27'),
+(8, 'paucek.kaycee', 'meredith.streich@example.com', '2021-08-26 18:00:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, '76kEilsVCY', '2021-08-26 18:00:27', '2021-08-26 18:00:27'),
+(9, 'alford47', 'shields.lina@example.org', '2021-08-26 18:00:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, 'PeNP4y1Wrq', '2021-08-26 18:00:27', '2021-08-26 18:00:27'),
+(10, 'julius.littel', 'gisselle60@example.org', '2021-08-26 18:00:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, 'Jd8TVI7Hkh', '2021-08-26 18:00:28', '2021-08-26 18:00:28'),
+(11, 'edmond.wiza', 'hershel.schultz@example.org', '2021-08-26 18:00:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, 'pd4U0JYFCo', '2021-08-26 18:00:28', '2021-08-26 18:00:28'),
+(12, 'danika.rolfson', 'emmitt.herman@example.net', '2021-08-26 18:00:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, 'XoOtAcVfhf', '2021-08-26 18:00:28', '2021-08-26 18:00:28'),
+(13, 'delbert70', 'qarmstrong@example.org', '2021-08-26 18:00:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, '5B4rRiPihN', '2021-08-26 18:00:28', '2021-08-26 18:00:28'),
+(14, 'greyson61', 'barbara59@example.net', '2021-08-26 18:00:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, 'QugsGtZSUw', '2021-08-26 18:00:28', '2021-08-26 18:00:28'),
+(15, 'isabel28', 'greta53@example.org', '2021-08-26 18:00:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, 'NNc94cGE2f', '2021-08-26 18:00:28', '2021-08-26 18:00:28'),
+(16, 'boyle.jillian', 'qpredovic@example.org', '2021-08-26 18:00:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, 'Ia9IzeXjJt', '2021-08-26 18:00:28', '2021-08-26 18:00:28'),
+(17, 'humberto51', 'aletha.bechtelar@example.org', '2021-08-26 18:00:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, 'lmb2JfqR16', '2021-08-26 18:00:28', '2021-08-26 18:00:28'),
+(18, 'deion.mohr', 'btorp@example.com', '2021-08-26 18:00:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, 'qYF8Pchyf3', '2021-08-26 18:00:28', '2021-08-26 18:00:28'),
+(19, 'geo.crooks', 'estell66@example.net', '2021-08-26 18:00:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, '0cpZcstQ72', '2021-08-26 18:00:28', '2021-08-26 18:00:28'),
+(20, 'gracie.dickinson', 'sauer.willard@example.com', '2021-08-26 18:00:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, 'fpKE4Pc5wr', '2021-08-26 18:00:28', '2021-08-26 18:00:28'),
+(21, 'king.bayer', 'hudson.gilda@example.net', '2021-08-26 18:00:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, 'cd0BeQsvSW', '2021-08-26 18:00:28', '2021-08-26 18:00:28'),
+(22, 'Peter', 'peter@sapo.pt', NULL, '$2y$10$6ztUXe1zZx3IGCR09HhMK.dOvqfTch8I0kajEDnMrgBsK9lI2Rb2y', 0, NULL, '2021-08-27 10:14:18', '2021-08-27 10:14:18');
 
 --
 -- Indexes for dumped tables
@@ -144,7 +165,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

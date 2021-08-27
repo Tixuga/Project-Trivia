@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <h3>Welcome {{ Auth::user()->name }}!</h3>
+                    <p>Click here to edit your user info</p> <a href="/editUser"><button type="button">Edit</button></a>
                 </div>
             </div>
         </div>

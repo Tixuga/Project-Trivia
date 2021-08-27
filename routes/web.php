@@ -23,3 +23,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/gamePage', 'HomeController@game')->name('gamePage');
 Route::get('/tutorial', 'HomeController@tutorial')->name('tutorial');
 Route::get('/leaderboards', 'UserController@showUsers')->name('leaderboards');
+Route::get('/editUser', 'UserController@editUser')->name('editUser');
+

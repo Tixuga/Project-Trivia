@@ -15,7 +15,7 @@ class UserController extends Controller
     public function showUsers()
     {
         $users = User::orderBy('points','desc')->get();
-        // dd($users);
+        //dd($users);
         return view('pages.leaderboards', ['users' => $users]);
     }
 
@@ -26,7 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('users.create');
     }
 
     /**
@@ -37,7 +37,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -46,9 +46,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $users)
     {
-        //
+        $users = User::where('id',auth()->id())->get();
+        //dd($users);
+        return view('pages.editUser', ['users'=>$users]);
     }
 
     /**
@@ -57,9 +59,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function editUser(User $user)
     {
-        //
+        $users = User::where('id',auth()->id())->first();
+        // dd($users);
+        return view('pages.editUser', ['users'=>$users]);
     }
 
     /**
@@ -71,7 +75,23 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $rules = [
+            'name'  => 'required|min:4|unique:users',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:8'
+        ];
+
+        $errorMessage = [
+            'required' => 'Enter your :attribute first.'
+        ];
+
+        $this->validate($request, $rules, $errorMessage);
+
+        $user->update([
+            'name'  => $request->name,
+            'email' => strtolower($request->email),
+            'password' => $request->password
+        ]);
     }
 
     /**
