@@ -15,7 +15,10 @@
                     @endif
 
                     <h3>Welcome {{ Auth::user()->name }}!</h3>
-                    <p>Click here to edit your user info</p> <a href="/editUser"><button type="button">Edit</button></a>
+                    
+                    <a href="/showUser"><button type="button">Account Info</button></a>
+                    <p>Number of correct answers: </p>
+                    <p>Number of wrong answers: </p>
                 </div>
             </div>
         </div>
