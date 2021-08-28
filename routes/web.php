@@ -27,4 +27,5 @@ Route::get('/editUser', 'UserController@editUser')->name('editUser');
 Route::get('/showUser', 'UserController@show')->name('show');
 Route::put('/user/{user}/update', 'UserController@update');
 Route::delete('/user/{user}/delete', 'UserController@delete');
-// Route::resource('user', UserController::class);
+
+Route::get('/gamePage', 'TriviaController@questions');

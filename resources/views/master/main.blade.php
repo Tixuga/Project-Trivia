@@ -20,6 +20,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Glory:wght@700&display=swap" rel="stylesheet">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
         <title>Trivia</title>
 
@@ -32,6 +35,13 @@
                 font-weight: 200;
                 min-height: 100vh;
                 margin: 0;
+            }
+
+            .py-4{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
             }
 
              /* .full-height {
@@ -94,6 +104,33 @@
             .card-header{
                 font-size: 2rem;
             }
+            #question-form{
+                font-family: 'Montserrat', sans-serif;
+                background-color: rgba(0, 0, 0, 0.437);
+                color: white;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-direction: column;
+                width: 60%;
+                min-height: 20rem;
+                border-radius: 10px; 
+                padding: 20px;
+            }
+
+            #confirm-btn{
+                width: 50%;
+            }
+
+            h3{
+                font-size: 2rem;
+            }
+
+            .form-check-label{
+                font-size: 1.75rem;
+                padding-bottom: 0.5rem;
+            }
+
             .table{
                 background-color: rgba(0, 0, 0, 0.437);
                 color: white;
