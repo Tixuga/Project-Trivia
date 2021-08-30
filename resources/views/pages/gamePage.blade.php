@@ -3,6 +3,8 @@
 @section('content')
     @component('components.gamePages.littleTitle')
     @endcomponent
-	@component('components.gamePages.trivia', ['resp'=>$resp])
+	@component('components.gamePages.trivia', [
+        'dataJson' => $dataJson,
+        ])
 	@endcomponent
 @endsection

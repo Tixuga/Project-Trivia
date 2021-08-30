@@ -104,6 +104,12 @@
             .card-header{
                 font-size: 2rem;
             }
+
+            .game-info{
+                color: white;
+                font-size: 1rem;
+            }
+
             #question-form{
                 font-family: 'Montserrat', sans-serif;
                 background-color: rgba(0, 0, 0, 0.437);
