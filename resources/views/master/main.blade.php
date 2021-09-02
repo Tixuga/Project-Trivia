@@ -7,7 +7,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>Trivia</title>
 
          <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
@@ -122,6 +122,12 @@
                 min-height: 20rem;
                 border-radius: 10px; 
                 padding: 20px;
+            }
+
+            .answer-box{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
             }
 
             #confirm-btn{

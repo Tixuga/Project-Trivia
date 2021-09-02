@@ -1,12 +1,4 @@
-@php
-    $data = json_decode($dataJson,true);
-    
-    // $question = $data['results'][$i]['question'];
-    // $category = $data['results'][$i]['category'];
-    // $difficulty = $data['results'][$i]['difficulty'];
-@endphp
-
-<form id="question-form" action="gamePages/results.blade.php" method="POST">
+<form id="question-form" action="" method="post">
 @for ($i = 0; $i < 10; $i++)
 
 <p class="game-info">Category: {{$data['results'][$i]['category']}}</p>
@@ -16,16 +8,6 @@
     <br>
       @php
           $rightAnswer = $data['results'][$i]['correct_answer'];
-          $wrongAnswerOne = $data['results'][$i]['incorrect_answers'][0];
-          $wrongAnswerTwo = $data['results'][$i]['incorrect_answers'][1];
-          $wrongAnswerThree = $data['results'][$i]['incorrect_answers'][2];
-          //create array to store and shuffle answers
-
-          $answers = array($rightAnswer, $wrongAnswerOne, $wrongAnswerTwo, $wrongAnswerThree);
-
-          shuffle($answers);
-          // print_r($answers);
-          // print_r($rightAnswer);
       @endphp
       <div class="answer-box">
         <div class="form-check">
@@ -59,5 +41,3 @@
 @endfor
 <button type="submit" id="confirm-btn" class="btn btn-success" value="submit">CONFIRM ANSWER</button>
 </form>
-
-
