@@ -32,6 +32,7 @@ class TriviaController extends Controller
     {
         //dd($request);
         $points = $request->points;
+        
         //dd($points);
 
         return view('pages.showResults', ['points' => $points]);

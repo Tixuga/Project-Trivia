@@ -17,6 +17,6 @@
     @method('PUT')
   <input type="hidden" name="pointSubmit" id="pointSubmit" value="{{$points}}">
     {{-- <button type="submit" class="btn">Play Again</button> --}}
-    <button type="submit" class="btn btn-info">Main Menu</button>
+    <button type="submit" class="btn btn-danger">Main Menu</button>
   </form>
 </div>

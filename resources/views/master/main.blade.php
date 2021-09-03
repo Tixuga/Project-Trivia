@@ -111,6 +111,13 @@
             }
 
             #question-form{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center; 
+            }
+
+            .question-box{
                 font-family: 'Montserrat', sans-serif;
                 background-color: rgba(0, 0, 0, 0.437);
                 color: white;
