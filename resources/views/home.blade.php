@@ -17,8 +17,6 @@
                     <h3>Welcome {{ Auth::user()->name }}!</h3>
                     
                     <a href="/showUser"><button type="button">Account Info</button></a>
-                    <p>Number of correct answers: </p>
-                    <p>Number of wrong answers: </p>
                 </div>
             </div>
         </div>

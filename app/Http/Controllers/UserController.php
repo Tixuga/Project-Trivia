@@ -78,6 +78,11 @@ class UserController extends Controller
         $user->update($request->all());
         return redirect('/showUser')->with('success','User info updated sucessfully');
     }
+    public function updatePoints(Request $request, User $user)
+    {
+        $user->update($request->all());
+        return redirect('/')->with('success','Points updated sucessfully');
+    }
 
     /**
      * Remove the specified resource from storage.

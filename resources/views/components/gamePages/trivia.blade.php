@@ -1,17 +1,16 @@
 @php
-    $data = json_decode($dataJson,true);
-    
     // $question = $data['results'][$i]['question'];
     // $category = $data['results'][$i]['category'];
     // $difficulty = $data['results'][$i]['difficulty'];
 @endphp
 
-<form id="question-form" action="gamePages/results.blade.php" method="POST">
+<form id="question-form" action="/trivia" method="POST" onsubmit="return verify()" novalidate>
+  @csrf
+  {{-- @method('POST'); --}}
 @for ($i = 0; $i < 10; $i++)
 
 <p class="game-info">Category: {{$data['results'][$i]['category']}}</p>
 <p class="game-info">Difficulty: {{$data['results'][$i]['difficulty']}}</p>
-
     <h3>{!!$data['results'][$i]['question']!!}</h3>
     <br>
       @php
@@ -29,35 +28,57 @@
       @endphp
       <div class="answer-box">
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" >
+          <input class="form-check-input" type="radio" name="answer_{{$i}}" id="answer_{{$i}}_0" value="{!!$answers[0]!!}">
           <label class="form-check-label" for="exampleRadios1">
             {!!$answers[0]!!}
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+          <input class="form-check-input" type="radio" name="answer_{{$i}}" id="answer_{{$i}}_1" value="{!!$answers[1]!!}">
           <label class="form-check-label" for="exampleRadios2">
             {!!$answers[1]!!}
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" >
+          <input class="form-check-input" type="radio" name="answer_{{$i}}" id="answer_{{$i}}_2" value="{!!$answers[2]!!}" >
           <label class="form-check-label" for="exampleRadios3">
             {!!$answers[2]!!}
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" >
+          <input class="form-check-input" type="radio" name="answer_{{$i}}" id="answer_{{$i}}_3" value="{!!$answers[3]!!}" >
           <label class="form-check-label" for="exampleRadios3">
             {!!$answers[3]!!}
           </label>
         </div>
       </div>
       <br>
+      @php print_r($rightAnswer); @endphp
       <p>================================================</p>
       <br>
 @endfor
-<button type="submit" id="confirm-btn" class="btn btn-success" value="submit">CONFIRM ANSWER</button>
+<input type="text" value="0" hidden id="points">
+<button type="" id="confirm-btn" class="btn btn-success" value="submit" onclick="verify()" >CONFIRM ANSWER</button>
 </form>
 
+<script>
+  function verify () {
+    let answerGiven = document.forms[0];
+    
+    let arrayTrivia = {!! json_encode($data['results']) !!};
+
+    var points = 0;
+
+    for (let i = 0; i < arrayTrivia.length; i++) {
+
+      var option = (document.querySelector("input[value='" + arrayTrivia[i].correct_answer + "']") && document.querySelector("input[value='" + arrayTrivia[i].correct_answer + "']").checked === true);
+      // console.log(option)
+      if (option) points++
+      console.log(points)
+      
+      document.getElementById("points").value = points;
+      document.getElementById("question-form").submit;
+    }  
+  }
+</script>
 

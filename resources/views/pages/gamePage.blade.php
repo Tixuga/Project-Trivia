@@ -4,7 +4,7 @@
     @component('components.gamePages.littleTitle')
     @endcomponent
 	@component('components.gamePages.trivia', [
-        'dataJson' => $dataJson,
+        'data' => $data,
         ])
 	@endcomponent
 @endsection

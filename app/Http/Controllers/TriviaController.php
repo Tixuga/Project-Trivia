@@ -13,39 +13,13 @@ class TriviaController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     public function questions()
-     {
+    public function questions()
+    {
         $dataJson = file_get_contents("https://opentdb.com/api.php?amount=10&type=multiple");
+        $data = json_decode($dataJson, true);
         return view('pages.gamePage', [
-            'dataJson' => $dataJson
+            'data' => $data
         ]);
-     }
-
-
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
     }
 
     /**
@@ -54,9 +28,13 @@ class TriviaController extends Controller
      * @param  \App\Trivia  $trivia
      * @return \Illuminate\Http\Response
      */
-    public function show(Trivia $trivia)
+    public function showResults(Request $request)
     {
-        //
+        // dd($request);
+        $points = $request->points;
+        dd($points);
+        
+        return view('pages.showResults', ['points' => $points]);
     }
 
     /**
