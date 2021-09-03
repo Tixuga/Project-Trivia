@@ -10,7 +10,7 @@
         <td>{{ $users->name }}</td>
         <td>{{ $users->email }}</td>
         <td>{{ $users->points }}</td>
-        <td><a href="/editUser"><button type="button" class="btn btn-success">Edit</button></a></td> 
+        <td><a href="/edit_user"><button type="button" class="btn btn-success">Edit</button></a></td> 
             <form action="/user/{{$users->id}}/delete" method="post">
                 @csrf
                 @method('DELETE')

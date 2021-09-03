@@ -1,0 +1,148 @@
+            html, body {
+                background-image:url('../images/low-poly-grid-haikei.svg');
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 200;
+                min-height: 100vh;
+                margin: 0;
+            }
+
+            .py-4{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .top-right {
+                position: absolute;
+                right: 10px;
+                top: 18px;
+            } 
+
+            .content {
+                text-align: center;
+            }
+
+            .title {
+                font-family: 'Glory', sans-serif;
+                font-size: 10rem;
+                color: rgb(255, 202, 9);
+                letter-spacing: 1rem;
+                text-shadow: 
+                    0.025em 0.025em 0 rgb(255, 94, 0),
+                    0.05em 0.05em 0 rgb(255, 0, 212),
+                    0.075em 0.075em 0 rgb(0, 255, 21),
+                    0.1em 0.1em 0 black
+            }
+
+            .links > a {
+                color: #fdfeff;
+                padding: 0 25px;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            .m-b-md {
+                margin-bottom: 30px;
+            }
+            
+            h1{
+                color: white;
+            }
+            .card{
+                background-color: rgba(0, 0, 0, 0.437);
+                color: white;
+            }
+            .card-header{
+                font-size: 2rem;
+            }
+
+            .game-info{
+                color: white;
+                font-size: 1rem;
+            }
+
+            #question-form{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center; 
+            }
+
+            .question-box{
+                font-family: 'Montserrat', sans-serif;
+                background-color: rgba(0, 0, 0, 0.437);
+                color: white;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-direction: column;
+                width: 60%;
+                min-height: 20rem;
+                border-radius: 10px; 
+                padding: 20px;
+            }
+
+            .answer-box{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            input[type='radio'] { 
+                transform: scale(2); 
+            }
+
+            #confirm-btn{
+                width: 50%;
+            }
+
+            .points-box{
+                font-family: 'Montserrat', sans-serif;
+                background-color: rgba(0, 0, 0, 0.437);
+                color: white;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-direction: column;
+                width: 60%;
+                min-height: 20rem;
+                border-radius: 10px; 
+                padding: 20px;
+            }
+
+            h3{
+                font-size: 2rem;
+            }
+
+            .form-check-label{
+                font-size: 1.75rem;
+                padding-bottom: 0.5rem;
+            }
+
+            .table{
+                background-color: rgba(0, 0, 0, 0.437);
+                color: white;
+            }
+
+            footer{
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                color: white;
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.326);
+            }
+
+            .foot-links{
+                text-decoration: none;
+                color: rgb(143, 245, 18);
+            }

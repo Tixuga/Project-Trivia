@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,16 +22,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/gamePage', 'HomeController@game')->name('gamePage');
-Route::get('/tutorial', 'HomeController@tutorial')->name('tutorial');
-Route::get('/leaderboards', 'UserController@index')->name('leaderboards');
-Route::get('/editUser', 'UserController@editUser')->name('editUser');
-Route::get('/showUser', 'UserController@show')->name('show');
+Route::get('/game_page', 'HomeController@game');
+Route::get('/leaderboards', 'UserController@index');
+
+Route::get('/edit_user', 'UserController@editUser');
+Route::get('/show_user', 'UserController@show');
 Route::put('/user/{user}/update', 'UserController@update');
 Route::delete('/user/{user}/delete', 'UserController@delete');
 
-Route::get('/gamePage', 'TriviaController@questions');
-Route::post('/showResults', 'TriviaController@showResults');
-Route::put('/userPointsUpdate', 'UserController@updatePoints');
-
-// Route::post('/results', 'TriviaController@trial');
+Route::get('/game_page', 'TriviaController@questions')->middleware('auth');
+Route::post('/show_results', 'TriviaController@showResults');
+Route::put('/user_points_update', 'UserController@updatePoints');

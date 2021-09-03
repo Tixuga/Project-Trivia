@@ -12,7 +12,7 @@
   @else
       <p>You got {{$points}} points!</p>
   @endif
-  <form action="/userPointsUpdate" method="post">
+  <form action="/user_points_update" method="post">
     @csrf
     @method('PUT')
   <input type="hidden" name="pointSubmit" id="pointSubmit" value="{{$points}}">

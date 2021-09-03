@@ -2,10 +2,13 @@
 
 @section('content')
 
-    @component('components.learderboard.leaderTittle')
+    @component('components.learderboard.leader_tittle')
     @endcomponent
 
-    @component('components.learderboard.leaderList', ['users'=>$users, 'i'=>0])
+    @component('components.learderboard.leader_list', [
+        'users' => $users,
+        'i'     => 0
+        ])
     @endcomponent
 
 @endsection

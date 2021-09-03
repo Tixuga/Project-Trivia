@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -27,10 +28,6 @@ class HomeController extends Controller
     }
     public function game()
     {
-        return view('pages.gamePage');
-    }
-    public function tutorial()
-    {
-        return view('pages.tutorial');
+        return view('pages.game_page');
     }
 }

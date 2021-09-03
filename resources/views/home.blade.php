@@ -16,7 +16,7 @@
 
                     <h3>Welcome {{ Auth::user()->name }}!</h3>
                     
-                    <a href="/showUser"><button type="button" class="btn btn-success">Account Info</button></a>
+                    <a href="/show_user"><button type="button" class="btn btn-success">Account Info</button></a>
                 </div>
             </div>
         </div>
