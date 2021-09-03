@@ -80,7 +80,11 @@ class UserController extends Controller
     }
     public function updatePoints(Request $request, User $user)
     {
-        $user->update($request->all());
+        //dd($request);
+        $user = User::where('id',auth()->id())->first();
+        $points = $request->pointSubmit;
+        $user->increment('points',$points);     
+        $user->update();
         return redirect('/')->with('success','Points updated sucessfully');
     }
 

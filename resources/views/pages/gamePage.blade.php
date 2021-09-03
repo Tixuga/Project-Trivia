@@ -7,4 +7,7 @@
         'data' => $data,
         ])
 	@endcomponent
+    {{-- @component('components.gamePages.trial')
+        
+    @endcomponent --}}
 @endsection

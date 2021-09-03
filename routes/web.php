@@ -29,5 +29,7 @@ Route::put('/user/{user}/update', 'UserController@update');
 Route::delete('/user/{user}/delete', 'UserController@delete');
 
 Route::get('/gamePage', 'TriviaController@questions');
-Route::post('/trivia', 'TriviaController@showResults');
-Route::get('/user/{user}/updatePoints', 'UserController@updatePoints');
+Route::post('/showResults', 'TriviaController@showResults');
+Route::put('/userPointsUpdate', 'UserController@updatePoints');
+
+// Route::post('/results', 'TriviaController@trial');

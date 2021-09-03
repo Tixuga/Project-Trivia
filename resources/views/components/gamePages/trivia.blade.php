@@ -4,7 +4,7 @@
     // $difficulty = $data['results'][$i]['difficulty'];
 @endphp
 
-<form id="question-form" action="/trivia" method="POST" onsubmit="return verify()" novalidate>
+<form id="question-form" action="/showResults" method="POST" onsubmit="return verify()" novalidate>
   @csrf
   {{-- @method('POST'); --}}
 @for ($i = 0; $i < 10; $i++)
@@ -57,8 +57,8 @@
       <p>================================================</p>
       <br>
 @endfor
-<input type="text" value="0" hidden id="points">
-<button type="" id="confirm-btn" class="btn btn-success" value="submit" onclick="verify()" >CONFIRM ANSWER</button>
+<input type="hidden" value="5" id="points" name="points">
+<button type="submit" id="confirm-btn" class="btn btn-success" onclick="verify()" >CONFIRM ANSWER</button>
 </form>
 
 <script>

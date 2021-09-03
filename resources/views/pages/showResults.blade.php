@@ -4,5 +4,5 @@
 
    @component('components.gamePages.results', ['points' => $points])
    @endcomponent
-
+   
 @endsection

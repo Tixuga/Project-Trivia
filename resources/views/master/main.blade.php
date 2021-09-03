@@ -138,6 +138,20 @@
                 width: 50%;
             }
 
+            .points-box{
+                font-family: 'Montserrat', sans-serif;
+                background-color: rgba(0, 0, 0, 0.437);
+                color: white;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-direction: column;
+                width: 60%;
+                min-height: 20rem;
+                border-radius: 10px; 
+                padding: 20px;
+            }
+
             h3{
                 font-size: 2rem;
             }
